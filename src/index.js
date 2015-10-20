@@ -29,10 +29,10 @@ class Table extends React.Component {
 
     return (
       <div>
-        <div>
+        <div className='result'>
           {this.state.count} / 80
         </div>
-        <div>
+        <div className='result'>
           {point}点
         </div>
         <table>
@@ -45,5 +45,27 @@ class Table extends React.Component {
   }
 }
 
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>基本情報点数チェッカー</h1>
+        <div className='desc'>
+          <p>2015年秋期基本情報技術者試験の点数確認ができます。
+          データ取得元は以下のIPAのホームページです。
+          </p>
+          <a href="https://www.jitec.ipa.go.jp/1_04hanni_sukiru/mondai_kaitou_2015h27.html#27aki">IPA解答例（2015、平成27年）</a>
+        </div>
+        <Table data={this.props.data} />
+        <footer>© 2015 akameco</footer>
+      </div>
+    );
+  }
+}
+
 let fe = require('../data/fe.json');
-ReactDOM.render(<Table data={ fe }/>, document.getElementById('app'));
+ReactDOM.render(<App data={ fe }/>, document.getElementById('app'));
