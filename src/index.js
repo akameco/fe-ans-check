@@ -57,6 +57,7 @@ class App extends React.Component {
         <div className='desc'>
           <p>2015年秋期基本情報技術者試験の点数確認ができます。
           データ取得元は以下のIPAのホームページです。
+          スマホで見るか、タブで移動しスペースで選択していくのが速いと思います。
           </p>
           <a href="https://www.jitec.ipa.go.jp/1_04hanni_sukiru/mondai_kaitou_2015h27.html#27aki">IPA解答例（2015、平成27年）</a>
         </div>
